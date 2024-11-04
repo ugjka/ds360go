@@ -1,7 +1,7 @@
 # Maintainer: Uģis Gērmanis <ugis@germanis.lv>
 _name=ds360go
 pkgname=${_name}-git
-pkgver=1
+pkgver=r2.2679511
 pkgrel=1
 pkgdesc="xboxdrv wrapper to use a Dualsense as a Xbox 360 controller on Linux "
 arch=(any)
@@ -26,5 +26,5 @@ build() {
 
 package() {
 	cd "$pkgname"
-	DESTDIR="${pkgdir}/usr/" PREFIX="/usr/" make install
+	DESTDIR="${pkgdir}/usr" PREFIX="/usr" make install
 }
