@@ -7,7 +7,7 @@ pgrep, xboxdrv, go, go-tools, make, systemd, udev
 
 ## building
 
-make
+`make`
 
 ## installation
 
@@ -19,7 +19,7 @@ make
 
 ds360go should start when DualSense gets connected and stops when it is disconnected
 
-this is accomplished with udev rules and systemd --user service. see source for more info.
+this is accomplished with udev rules and systemd user service. see source for more info.
 
 ## steam
 
@@ -27,7 +27,7 @@ ds360go will stop xboxdrv when it detects steam game overlay because steam has i
 
 ## arch
 
-`paru -S ds360go-git`
+`paru -S ds360go-git` or your aur helper of choice
 
 ## license
 
