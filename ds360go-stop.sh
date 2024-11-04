@@ -1,2 +1,2 @@
 #!/bin/sh
-kill -HUP "$(cat /tmp/ds360go.pid)"
+xargs kill -HUP < /tmp/ds360go.pid

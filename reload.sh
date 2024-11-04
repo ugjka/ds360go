@@ -1,5 +1,5 @@
 #!/bin/sh
-for U in $(w -h | awk '{print $1}' | sort -u); do
-	systemctl -M "$U@" --user daemon-reload
+for u in $(w -h | awk '{if (!seen[$1]++) print $1}'); do
+	systemctl -M "$u@" --user daemon-reload
 done
 udevadm control --reload
