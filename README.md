@@ -11,8 +11,9 @@ make
 
 ## installation
 
-sudo make install
-sudo make reload
+`sudo make install`
+
+`sudo make reload`
 
 ## running
 
@@ -26,7 +27,7 @@ ds360go will stop xboxdrv when it detects steam game overlay because steam has i
 
 ## arch
 
-paru -S ds360go-git
+`paru -S ds360go-git`
 
 ## license
 
