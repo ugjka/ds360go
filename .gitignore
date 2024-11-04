@@ -1,6 +1,2 @@
 ds360go
 .directory/
-arch/*
-!arch/PKGBUILD
-!arch/ds360go.install
-!arch/.SRCINFO

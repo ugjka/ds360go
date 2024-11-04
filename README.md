@@ -1,33 +1,33 @@
 # ds360go
 xboxdrv wrapper to use a Dualsense as a Xbox 360 controller on Linux
 
-# requirements
+## requirements
 
 pgrep, xboxdrv, go, go-tools, make, systemd, udev
 
-# building
+## building
 
 make
 
-# installation
+## installation
 
 sudo make install
 sudo make reload
 
-# running
+## running
 
 ds360go should start when DualSense gets connected and stops when it is disconnected
 
 this is accomplished with udev rules and systemd --user service. see source for more info.
 
-# steam
+## steam
 
 ds360go will stop xboxdrv when it detects steam game overlay because steam has its own controller driver that interferes and older games get confused
 
-# arch
+## arch
 
 paru -S ds360go-git
 
-# license
+## license
 
 MIT
