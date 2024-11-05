@@ -156,7 +156,7 @@ func findEvdevPath() (path string, err error) {
 	evreg := regexp.MustCompile(EVENTREGEX)
 	for scanner.Scan() {
 		if evreg.MatchString(scanner.Text()) {
-			eventNum := evreg.FindStringSubmatch(scanner.Text())[0]
+			eventNum := evreg.FindString(scanner.Text())
 			return fmt.Sprintf(EVDEVPATH, eventNum), nil
 		}
 	}
