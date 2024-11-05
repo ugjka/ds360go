@@ -166,16 +166,7 @@ func findEvdevPath() (path string, err error) {
 
 func parseXboxdrv(evpath string) *exec.Cmd {
 	arr := strings.Fields(fmt.Sprintf(XBOXDRVCONF, evpath))
-	var cleanup []string
-
-	for _, v := range arr {
-		v = strings.TrimSpace(v)
-		if v != "" {
-			cleanup = append(cleanup, v)
-		}
-	}
-
-	cmd := exec.Command(cleanup[0], cleanup[1:]...)
+	cmd := exec.Command(arr[0], arr[1:]...)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	return cmd
