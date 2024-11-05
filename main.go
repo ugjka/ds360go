@@ -173,7 +173,7 @@ func parseXboxdrv(evpath string) *exec.Cmd {
 }
 
 func steamGameoverlayuiRunning() bool {
-	_, err := exec.Command("pgrep", "-fl", "gameoverlayui").Output()
+	_, err := exec.Command("pgrep", "gameoverlayui").Output()
 	return err == nil
 }
 
