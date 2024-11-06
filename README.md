@@ -3,7 +3,7 @@ xboxdrv wrapper to use a Dualsense as a Xbox 360 controller on Linux
 
 ## requirements
 
-pgrep, xboxdrv, go, go-tools, make, systemd, udev
+pgrep, xboxdrv, go, make, systemd, udev
 
 ## building
 
