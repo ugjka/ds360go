@@ -119,7 +119,7 @@ func main() {
 		}
 
 		if command.Process == nil {
-			log.Println("steam overlay no more, ressurecting xboxdrv")
+			log.Println("steam overlay gone, ressurecting xboxdrv")
 			command.Start()
 		}
 	}
