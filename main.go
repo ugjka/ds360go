@@ -2,7 +2,6 @@ package main
 
 import (
 	"bufio"
-	"bytes"
 	"flag"
 	"fmt"
 	"log"
@@ -134,12 +133,13 @@ func checkPresent() (present bool, err error) {
 }
 
 func findEvdevPath() (path string, err error) {
-	data, err := os.ReadFile(DEVICES)
+	f, err := os.Open(DEVICES)
 	if err != nil {
 		return path, err
 	}
+	defer f.Close()
 
-	scanner := bufio.NewScanner(bytes.NewReader(data))
+	scanner := bufio.NewScanner(f)
 	var found bool
 
 	for scanner.Scan() {
