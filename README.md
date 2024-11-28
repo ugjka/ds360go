@@ -25,7 +25,7 @@ this is accomplished with udev rules and systemd user service. see source for mo
 
 ds360go will stop xboxdrv when it detects steam game overlay because steam has its own controller driver that interferes and older games get confused
 
-## arch
+## archlinux
 
 `paru -S ds360go-git` or your aur helper of choice
 
