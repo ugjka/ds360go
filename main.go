@@ -16,7 +16,9 @@ import (
 
 const DSDEVVID = "054c"
 const DSDEVPID = "0ce6"
-const SEARCHDEV = "Vendor=" + DSDEVVID + " Product=" + DSDEVPID
+const DSEDGEDEVPID = "0df2"
+const SEARCHDSDEV = "Vendor=" + DSDEVVID + " Product=" + DSDEVPID
+const SEARCHDSEDGEDEV = "Vendor=" + DSDEVVID + " Product=" + DSEDGEDEVPID
 const DEVICES = "/proc/bus/input/devices"
 const EVENTREGEX = `event\d+`
 const EVDEVPATH = "evdev=/dev/input/%s"
@@ -129,7 +131,8 @@ func checkPresent() (present bool, err error) {
 	if err != nil {
 		return present, err
 	}
-	return strings.Contains(string(data), SEARCHDEV), nil
+	is := strings.Contains(string(data), SEARCHDSDEV) || strings.Contains(string(data), SEARCHDSEDGEDEV)
+	return is, nil
 }
 
 func findEvdevPath() (path string, err error) {
@@ -143,7 +146,7 @@ func findEvdevPath() (path string, err error) {
 	var found bool
 
 	for scanner.Scan() {
-		if strings.Contains(scanner.Text(), SEARCHDEV) {
+		if strings.Contains(scanner.Text(), SEARCHDSDEV) || strings.Contains(scanner.Text(), SEARCHDSEDGEDEV) {
 			found = true
 			break
 		}

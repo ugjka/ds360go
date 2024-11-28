@@ -1,2 +1,4 @@
 ACTION=="add", SUBSYSTEM=="input", ATTRS{id/vendor}=="054c", ATTRS{id/product}=="0ce6", TAG+="systemd", ENV{SYSTEMD_USER_WANTS}="ds360go.service"
 ACTION=="remove", SUBSYSTEM=="input", ATTRS{id/vendor}=="054c", ATTRS{id/product}=="0ce6", RUN+="
+ACTION=="add", SUBSYSTEM=="input", ATTRS{id/vendor}=="054c", ATTRS{id/product}=="0df2", TAG+="systemd", ENV{SYSTEMD_USER_WANTS}="ds360go.service"
+ACTION=="remove", SUBSYSTEM=="input", ATTRS{id/vendor}=="054c", ATTRS{id/product}=="0df2", RUN+="
