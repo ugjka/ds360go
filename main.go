@@ -105,7 +105,7 @@ func main() {
 
 	// Guard against steam, because it runs its own gamepad manager that interferes with
 	// xboxdrv, games like Gta 4 running via wine get confused
-	tick := time.NewTicker(time.Second * 5)
+	tick := time.NewTicker(time.Second)
 	for {
 		<-tick.C
 
